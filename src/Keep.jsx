@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import { Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+import { List } from './List';
 export const Keep = () => {
     const [show, setShow] = useState(false);
     const toggle = () => {
@@ -70,19 +70,11 @@ export const Keep = () => {
                 </Row>
             </Container>
             <Container>
-                <Row>
-                    {task.map((task, index) => {
-                        return (
-                            <div className='list-div'>
-                                <ol>
-                                    <li key={index} className='text-info' style={{ fontSize: "22px" }}>{task.title}</li>
-                                    <li key={index} style={{ fontSize: "16px" }}>{task.description}</li>
-                                </ol>
-                                    <Button className='btn btn-danger'>➖</Button>
-                            </div>
-                        )
-                    })}
-                </Row>
+            <Row>
+                {task.map((task, index) => {
+                    return <List key={index} task={task} />
+                })}
+            </Row>
             </Container>
         </section>
     )

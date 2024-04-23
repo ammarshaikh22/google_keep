@@ -45,3 +45,8 @@ ol{
     -o-border-radius: 50%;
     
 }
+.main{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
