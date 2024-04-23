@@ -69,12 +69,12 @@ export const Keep = () => {
                     </Row>
                 </Row>
             </Container>
-            <Container>
-            <Row>
-                {task.map((task, index) => {
-                    return <List key={index} task={task} />
-                })}
-            </Row>
+            <Container style={{ margin: "20px auto" }}>
+                <Row>
+                    {task.map((task, index) => {
+                        return <List key={index} task={task} />
+                    })}
+                </Row>
             </Container>
         </section>
     )
