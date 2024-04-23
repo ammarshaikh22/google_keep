@@ -25,6 +25,13 @@ export const Keep = () => {
         setTask((prev) => [...prev, data]);
         setData({ title: "", description: "" });
     }
+    const remove = (id) => {
+        setTask((pre) => {
+            return pre.filter((task, index) => {
+                return index !== id
+            })
+        })
+    }
     return (
         <section className="mt-5">
             <Container>
@@ -72,7 +79,7 @@ export const Keep = () => {
             <Container style={{ margin: "20px auto" }}>
                 <Row>
                     {task.map((task, index) => {
-                        return <List key={index} task={task} />
+                        return <List key={index} task={task} id={index} remove={remove} />
                     })}
                 </Row>
             </Container>

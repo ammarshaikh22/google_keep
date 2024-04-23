@@ -12,7 +12,7 @@ textarea {
 }
 
 .list-div {
-    width: 200px;
+    width: auto;
     height: auto;
     padding: 10px;
     text-align: start;
