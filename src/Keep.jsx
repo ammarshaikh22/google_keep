@@ -75,10 +75,10 @@ export const Keep = () => {
                         return (
                             <div className='list-div'>
                                 <ol>
-                                    <Button >🗑️</Button>
                                     <li key={index} className='text-info' style={{ fontSize: "22px" }}>{task.title}</li>
                                     <li key={index} style={{ fontSize: "16px" }}>{task.description}</li>
                                 </ol>
+                                    <Button className='btn btn-danger'>➖</Button>
                             </div>
                         )
                     })}
