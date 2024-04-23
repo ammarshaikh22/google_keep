@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import { Row } from 'react-bootstrap';
 import { List } from './List';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 export const Keep = () => {
     const [show, setShow] = useState(false);
     const toggle = () => {
@@ -60,18 +61,16 @@ export const Keep = () => {
                             }
                         } : { style: { display: "none" } }} onChange={showData} value={data.description} />
 
-                        <button className='btn btn-info mt-5'
+                        <AddBoxIcon
                             {...show ? {
                                 style: {
+                                    fontSize: "60px",
                                     display: "block",
-                                    maxWidth: "40px",
-                                    height: "40px",
-                                    borderRadius: "50%",
                                     position: "absolute",
-                                    right: "420px",
-                                    padding: "0"
+                                    right: "410px",
+                                    bottom: "240px",
                                 }
-                            } : { style: { display: "none" } }} onClick={addTask}>➕</button>
+                            } : { style: { display: "none" } }} onClick={addTask} />
 
                     </Row>
                 </Row>

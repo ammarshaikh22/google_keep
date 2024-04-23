@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const List = (props) => {
 
@@ -9,7 +9,7 @@ export const List = (props) => {
                 <li id={props.id} className='text-info' style={{ fontSize: "22px" }}>{props.task.title}</li>
                 <li id={props.id} style={{ fontSize: "16px" }}>{props.task.description}</li>
             </ol>
-            <Button onClick={() => props.remove(props.id)} style={{ width: "40px", height: "40px", padding: "0" }}>➖</Button>
+            <DeleteIcon onClick={() => props.remove(props.id)} style={{ width: "40px", height: "40px", padding: "0" }}>➖</DeleteIcon>
         </div>
     )
 }
